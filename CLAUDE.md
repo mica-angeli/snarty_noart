@@ -2,7 +2,7 @@
 
 This repo contains a [Rockbox](https://www.rockbox.org/) theme based on SNARTY (v1.0, by Simon Andén / Tirim4, CC-BY-SA 4.0). SNARTY itself derives from SPAZZ, SNAZZ/SNAZZ2 and SNAZZY, with some elements from adwaitapod. Keep the attribution headers in the theme files and keep derived work under CC-BY-SA 4.0.
 
-The goal of this fork is a variant of SNARTY without album art. Upstream draws album art in the `.wps` in the `#__Album Art` blocks of the main display and the lock screen (`%Cl`/`%Cd`, with `wps/SNARTY_NOART/AlbumArt.bmp` as the placeholder).
+This fork is a variant of SNARTY without album art. Upstream drew a 114x114 album art box at the left of the WPS main display and lock screen; here it is removed, and the track title, artist, album, file info and peak meter viewports span the full 280 px content width (x=20) instead of sitting to its right (x=140, 165 px wide). Do not reintroduce `%Cl`/`%Cd` album art tags.
 
 - Target resolution: 320x240 (tested upstream on the HiFi Walker H2)
 - The theme is named `SNARTY_NOART` and every theme-specific file carries that name, so it installs alongside upstream SNARTY without overwriting it. The KodeMono fonts keep their upstream names and are shared with SNARTY (identical files).
