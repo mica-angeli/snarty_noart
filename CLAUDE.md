@@ -2,10 +2,10 @@
 
 This repo contains a [Rockbox](https://www.rockbox.org/) theme based on SNARTY (v1.0, by Simon Andén / Tirim4, CC-BY-SA 4.0). SNARTY itself derives from SPAZZ, SNAZZ/SNAZZ2 and SNAZZY, with some elements from adwaitapod. Keep the attribution headers in the theme files and keep derived work under CC-BY-SA 4.0.
 
-The goal of this fork is a variant of SNARTY without album art. Upstream draws album art in the `.wps` in the `#__Album Art` blocks of the main display and the lock screen (`%Cl`/`%Cd`, with `wps/SNARTY/AlbumArt.bmp` as the placeholder).
+The goal of this fork is a variant of SNARTY without album art. Upstream draws album art in the `.wps` in the `#__Album Art` blocks of the main display and the lock screen (`%Cl`/`%Cd`, with `wps/SNARTY_NOART/AlbumArt.bmp` as the placeholder).
 
 - Target resolution: 320x240 (tested upstream on the HiFi Walker H2)
-- Files are still named `SNARTY.*`; the theme has not been renamed in this fork
+- The theme is named `SNARTY_NOART` and every theme-specific file carries that name, so it installs alongside upstream SNARTY without overwriting it. The KodeMono fonts keep their upstream names and are shared with SNARTY (identical files).
 
 ## Layout
 
@@ -13,10 +13,10 @@ The tree mirrors the `.rockbox/` directory on the player.
 
 | Path | Purpose |
 | --- | --- |
-| `themes/SNARTY.cfg` | Theme config: points at the wps/sbs/iconset/font and sets colours and UI settings |
-| `wps/SNARTY.wps` | While Playing Screen skin (main display plus lock screen shown when hold is on) |
-| `wps/SNARTY.sbs` | Base skin for menus: status bar, title, now-playing footer, quick screen, USB screen |
-| `wps/SNARTY/*.bmp` | Images loaded by the skins with `%xl` |
+| `themes/SNARTY_NOART.cfg` | Theme config: points at the wps/sbs/iconset/font and sets colours and UI settings |
+| `wps/SNARTY_NOART.wps` | While Playing Screen skin (main display plus lock screen shown when hold is on) |
+| `wps/SNARTY_NOART.sbs` | Base skin for menus: status bar, title, now-playing footer, quick screen, USB screen |
+| `wps/SNARTY_NOART/*.bmp` | Images loaded by the skins with `%xl` |
 | `icons/*.bmp` | Menu and viewer iconsets |
 | `fonts/*.fnt` | KodeMono in 12/15/22/29/72 px, Rockbox `.fnt` format |
 
@@ -24,7 +24,7 @@ The tree mirrors the `.rockbox/` directory on the player.
 
 There is no build step, linter or test suite. To try a change, copy `fonts/`, `icons/`, `themes/` and `wps/` into `/.rockbox/` on the player (or a Rockbox simulator's `simdisk/.rockbox/`) and select the theme under Settings > Theme Settings > Browse Theme Files.
 
-Paths in `SNARTY.cfg` are absolute device paths (`/.rockbox/...`), so renaming or moving a file means updating the `.cfg`, and the `%xl`/`%Fl` references in both skin files.
+Paths in `SNARTY_NOART.cfg` are absolute device paths (`/.rockbox/...`), so renaming or moving a file means updating the `.cfg`, and the `%xl`/`%Fl` references in both skin files.
 
 ## Skin conventions
 
